@@ -1,0 +1,9 @@
+import requests
+import json
+
+# Fetch data from a REST API
+r = requests.get("https://quotes.rest/qod.json")
+res = r.json()
+print(json.dumps(res, indent=4)) ## to print identited version of json file
+
+## res containes the json object in the form of a dictionary, navigate accordinly
