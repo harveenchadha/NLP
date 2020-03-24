@@ -1,0 +1,17 @@
+import re
+
+# Remove punctuation characters
+
+## 3 step procedure
+
+## 1. Decide on what regular expression you want
+## 2. Compile the regular expression
+## 3. Use sub function to substitue the pattern values with source string and target string
+
+
+pattern = re.compile(r"[^a-zA-Z0-9]")
+text = pattern.sub(" ", text)
+
+#text = re.sub(, " ", text) 
+
+print(text)
