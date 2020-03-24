@@ -1,0 +1,20 @@
+from nltk.stem.porter import PorterStemmer
+
+# Reduce words to their stems
+## --------------------stemming------------
+
+stemmed = [PorterStemmer().stem(w) for w in words]
+print(stemmed)
+
+
+## -----------------------lemmatizer----------------------
+from nltk.stem.wordnet import WordNetLemmatizer
+
+# Reduce words to their root form
+lemmed = [WordNetLemmatizer().lemmatize(w) for w in words]
+print(lemmed)
+
+
+# Lemmatize verbs by specifying pos
+lemmed = [WordNetLemmatizer().lemmatize(w, pos='v') for w in lemmed]
+print(lemmed)
