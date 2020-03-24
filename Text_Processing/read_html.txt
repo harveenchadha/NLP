@@ -1,0 +1,7 @@
+import requests
+
+# Fetch a web page
+r = requests.get("https://news.ycombinator.com")
+print(r.text)
+
+##prints html, further beautfiul soup or regular expressions can be applied
