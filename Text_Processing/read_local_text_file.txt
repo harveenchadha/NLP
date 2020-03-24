@@ -1,0 +1,6 @@
+import os
+
+# Read in a plain text file
+with open(os.path.join(".", "filename.txt"), "r") as f:
+    text = f.read()
+    print(text)
