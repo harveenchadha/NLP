@@ -1,0 +1,5 @@
+import re
+
+# Remove HTML tags using RegEx
+pattern = re.compile(r'<.*?>')  # tags look like <...>
+print(pattern.sub('', r.text))  # replace them with blank
