@@ -1,0 +1,21 @@
+from bs4 import BeautifulSoup
+
+# Remove HTML tags using Beautiful Soup library
+soup = BeautifulSoup(r.text, "html5lib") ## create a soup object
+print(soup.get_text()) ## print the text you get from HTML
+
+
+-------------------------------------------------------------------
+
+## Now you will not always want the entire HTML output but some particular tags in it
+
+## soup.find_all( name, attributes {} ) you can define a dictionary in attributes
+
+soup.find_all( 'tr' , class_='tr_done' ) ## this will find all the occurences of the table rows with class tr_done
+
+## Now if you are looking for something specific in the element you have got, then you can again apply soup library to it
+
+summaries = soup.find_all( 'tr' , class_='tr_done' )
+
+summaries[0].find("a", class_="storylink").get_text().strip() ## this will get the text within a tag with class 'storylink' and remove unnecessary white spaces
+
